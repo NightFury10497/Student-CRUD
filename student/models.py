@@ -1,7 +1,6 @@
 from django.db import models
 from django.urls import reverse
 
-
 class Student(models.Model):
     name = models.CharField(max_length=200)
     section = models.CharField(max_length=200)

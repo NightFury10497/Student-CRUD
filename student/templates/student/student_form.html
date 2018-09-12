@@ -6,143 +6,65 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-
   </head>
   <style>
-ul {
+  ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: Black;
-}
-
-li {
+    background-color: Black;}li {
     float: left;
-}
-
-li a, .dropbtn {
+}li a, .dropbtn {
     display: inline-block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: #dd2163;
-}
-
-
-.dropdown-content {
+}li a:hover, .dropdown:hover .dropbtn {background-color: #dd2163;}.dropdown-content {
     display: none;
     position: absolute;
     background-color: red;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 2px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}/* General */
-
-/* html {
-	overflow-y: scroll; /* adds scroll bar to ensure that short and long pages are lined up equally */
-} */
-
-h1,h2,h3,h4,
-h5,
-h6 {
+}.dropdown-content a {    color: black;    padding: 2px 16px;    text-decoration: none;    display: block;    text-align: left;}/* General */h1,h2,h3,h4,h5,h6 {
 	font-family: "Libre Franklin", sans-serif;
 	font-weight: bold;
-}
-
-a {
-	color: red;
-}
-
-
-
-
-
-.learn_more-link {
+}a {	color: red;}.learn_more-link {
 	display: block;
 	position: relative;
 	border: 8px solid black;
-}
-
-.learn_more-link:hover {
+}.learn_more-link:hover {
 	background: rgba(221, 33, 99, 0.75);
 	transition: all ease 0.5s;
 	-webkit-transition: all ease 0.5s;
 	-moz-transition: all ease 0.5s;
-}
-
-.learn_more img {
-	opacity: .33;
-}
-
-.learn_more-text {
+}.learn_more img {	opacity: .33;}.learn_more-text {
 	text-align: left;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-size: 2rem;
-}
-
-@media (max-width: 7px) {
-	.learn_more-item {
+}@media (max-width: 7px) {	.learn_more-item {
 		margin: 0 0 10rem;
-	}
-	.learn_more {
+	}	.learn_more {
 		margin-bottom: 10rem;
-	}
-}
-
-/* Header images */
-
-
-
-
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
+	}}.dropdown-content a:hover {background-color: #f1f1f1}.dropdown:hover .dropdown-content {
     display: block;
-}
-</style>
-
+}</style>
   <body>
-    <!-- <h2><a href="{% url 'student:student_list' %}">List Of Students</a></h2> -->
-
     <ul>
-      <li><a href="{% url 'student:student_list' %}" class="learn_more-link">Home</a></li>
-    </ul>
-
+    <li><a href="{% url 'student:student_list' %}" class="learn_more-link">Home</a></li>
+  </ul>
     <div class="container">
-      <form method="post">{% csrf_token %}
-    <h2>Modify Details of the Student</h2>
-    <br>
-        {{form}}
-
-        <!-- <input type="submit" value="Submit"> -->
-        <button type="submit" name="button" value="Submit" class="btn btn-warning">Submit</button>
-
-
+    <form method="post">{% csrf_token %}
+      <h2>Modify Details of the Student</h2>
+      <br>
+      {{form}}
+      <button type="submit" name="button" value="Submit" class="btn btn-warning">Submit</button>
       </form>
     </div>
-
-
-
-
-
-
-
   </body>
 </html>
